@@ -3,7 +3,7 @@ import React from 'react';
 class TimeBar extends React.Component {
   render() {
     return (
-      <div>
+      <div class="timer-bar-container">
         <ul className="timer-bar">
           <li>Daily</li>
           <li>Weekly</li>

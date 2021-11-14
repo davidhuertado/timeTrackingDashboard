@@ -5,7 +5,7 @@ import TimeBar from './TimeBar';
 class UserTimeStatus extends React.Component {
   render() {
     return (
-      <div>
+      <div className="user-time-status">
         <UserCard />
         <TimeBar />
       </div>

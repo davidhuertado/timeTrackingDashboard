@@ -5,7 +5,7 @@
 }
 body {
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: hsl(226, 43%, 10%);
   color: #fff;
   padding: 80px 20px;
@@ -23,24 +23,39 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .user-card .avatar-container {
-  width: 65px;
+  width: 70px;
+  margin: auto auto auto 10px;
+}
+.name-container {
+  margin: auto 30px auto auto;
 }
 .user-card .user-h {
   font-weight: 500;
-  font-size: 21px;
+  font-size: 23px;
 }
 .user-card .user-h span {
-  font-size: 14px;
+  font-size: 16px;
 }
 .timer-bar {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  padding: 20px 1px;
 }
 .timer-bar li {
   color: hsl(236, 100%, 87%);
   font-size: 15px;
+  cursor: pointer;
+}
+.timer-bar-container {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+}
+.user-time-status {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
 }
