@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  color: #fff;
+  padding: 80px 20px;
+}
+
+.avatar {
+  border: solid 3px #fff;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+.user-card {
+  background-color: hsl(246, 80%, 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.user-card .avatar-container {
+  width: 65px;
+}
+.user-card .user-h {
+  font-weight: 500;
+  font-size: 21px;
+}
+.user-card .user-h span {
+  font-size: 14px;
+}
+.timer-bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.timer-bar li {
+  color: hsl(236, 100%, 87%);
+  font-size: 15px;
+}
