@@ -6,14 +6,20 @@ import data from './data.json';
 class TaskCard extends React.Component {
   render() {
     return (
-      <div className="task-card">
-        <div className="task-header">
-          <img src={workIcon} className="task-img" alt="Work" />
+      <div
+        className="task-card"
+        style={{ backgroundColor: this.props.task.background }}
+      >
+        <div
+          className="task-header"
+          style={{ backgroundColor: this.props.task.background }}
+        >
+          <img src={this.props.task.taskIcon} className="task-img" alt="Work" />
         </div>
         <div className="task-info">
           <div className="info-header">
             <div className="task-name-div">
-              <h2 className="task-name">Work</h2>
+              <h2 className="task-name">{this.props.task.taskName}</h2>
             </div>
             <div className="ellipsis-div">
               <img

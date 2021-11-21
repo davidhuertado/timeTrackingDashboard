@@ -51,10 +51,13 @@ body {
   justify-content: space-around;
   padding: 20px 1px;
 }
-.timer-bar li {
+.timer-bar .time-li {
   color: hsl(236, 100%, 87%);
   font-size: 15px;
   cursor: pointer;
+}
+.timer-bar .time-li.active {
+  color: #fff;
 }
 .timer-bar-container {
   background-color: hsl(235, 46%, 20%);
@@ -67,7 +70,7 @@ body {
 }
 
 .task-header {
-  background-color: hsl(15, 100%, 70%);
+  /* background-color: hsl(15, 100%, 70%); */
   overflow: hidden;
   position: relative;
   height: 40px;
@@ -111,7 +114,7 @@ body {
   right: 30px;
 }
 .task-card {
-  background-color: hsl(15, 100%, 70%);
+  /* background-color: hsl(15, 100%, 70%); */
   border-radius: 10px;
   max-width: 335px;
 }
