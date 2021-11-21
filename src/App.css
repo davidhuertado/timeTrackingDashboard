@@ -5,7 +5,7 @@
 }
 body {
   font-size: 18px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Rubik', sans-serif;
   background-color: hsl(226, 43%, 10%);
   color: #fff;
   padding: 80px 20px;
@@ -15,6 +15,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 25px;
+  justify-items: center;
 }
 .avatar {
   border: solid 3px #fff;
@@ -39,7 +40,7 @@ body {
   margin: auto 30px auto auto;
 }
 .user-card .user-h {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 23px;
 }
 .user-card .user-h span {
@@ -50,6 +51,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 20px 1px;
+  font-weight: 300;
 }
 .timer-bar .time-li {
   color: hsl(236, 100%, 87%);
@@ -66,7 +68,7 @@ body {
 .user-time-status {
   background-color: hsl(235, 46%, 20%);
   border-radius: 10px;
-  max-width: 335px;
+  width: 335px;
 }
 
 .task-header {
@@ -78,7 +80,7 @@ body {
   border-top-right-radius: 10px;
 }
 .taskCard {
-  max-width: 335px;
+  width: 335px;
 }
 .info-header {
   display: flex;
@@ -102,7 +104,7 @@ body {
   padding: 0 20px 20px;
 }
 .hours-h {
-  font-weight: 500;
+  font-weight: 300;
 }
 .last-time {
   font-size: 14px;
@@ -114,7 +116,62 @@ body {
   right: 30px;
 }
 .task-card {
-  /* background-color: hsl(15, 100%, 70%); */
   border-radius: 10px;
-  max-width: 335px;
+  width: 335px;
+}
+.ellipsis-icon {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+  .App {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 25px;
+    justify-items: center;
+    padding: 100px;
+  }
+  .user-card {
+    flex-direction: column;
+    padding-bottom: 70px;
+  }
+  .name-container {
+    margin: auto auto auto 10px;
+  }
+  .user-card .user-h {
+    font-size: 33px;
+    margin-top: 15px;
+  }
+  .user-time-status {
+    width: 255px;
+    grid-row: 1 / 3;
+  }
+  .task-card {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .task-time-div {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 30px 20px;
+  }
+  .hours-h {
+    font-size: 45px;
+  }
+  .task-hours-div {
+    margin: 20px 0 10px;
+  }
+  .info-header {
+    padding: 25px 30px 5px;
+  }
+  .timer-bar {
+    flex-direction: column;
+    padding-left: 30px;
+  }
+  .timer-bar .time-li {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import workIcon from './images/icon-work.svg';
 import ellipsisIcon from './images/icon-ellipsis.svg';
 import data from './data.json';
 
