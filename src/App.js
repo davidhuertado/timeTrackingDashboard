@@ -30,16 +30,30 @@ const taskArray = [
 ];
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleTimeClick = this.handleTimeClick.bind(this);
+    this.state = { currentTime: 'Weekly' };
+  }
+
+  handleTimeClick(newTime) {
+    this.setState((state, props) => ({
+      currentTime: newTime,
+    }));
+  }
   render() {
     return (
       <div className="App">
-        <UserTimeStatus />
-        <TaskCard task={taskArray[0]} />
-        <TaskCard task={taskArray[1]} />
-        <TaskCard task={taskArray[2]} />
-        <TaskCard task={taskArray[3]} />
-        <TaskCard task={taskArray[4]} />
-        <TaskCard task={taskArray[5]} />
+        <UserTimeStatus
+          currentTime={this.state.currentTime}
+          handleTimeClick={this.handleTimeClick}
+        />
+        <TaskCard currentTime={this.state.currentTime} task={taskArray[0]} />
+        <TaskCard currentTime={this.state.currentTime} task={taskArray[1]} />
+        <TaskCard currentTime={this.state.currentTime} task={taskArray[2]} />
+        <TaskCard currentTime={this.state.currentTime} task={taskArray[3]} />
+        <TaskCard currentTime={this.state.currentTime} task={taskArray[4]} />
+        <TaskCard currentTime={this.state.currentTime} task={taskArray[5]} />
       </div>
     );
   }

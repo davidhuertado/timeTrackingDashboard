@@ -3,15 +3,20 @@ import React from 'react';
 class TimeBar extends React.Component {
   constructor(props) {
     super(props);
+    this.handleTimeClick = this.handleTimeClick.bind(this);
 
-    this.state = { current: 'Weekly' };
+    // this.state = { current: 'Weekly' };
   }
 
-  onTimeClick = (e) => {
-    const newTime = e.target.textContent;
-    this.setState((state, props) => ({
-      current: newTime,
-    }));
+  // onTimeClick = (e) => {
+  //   const newTime = e.target.textContent;
+  //   this.setState((state, props) => ({
+  //     current: newTime,
+  //   }));
+  // };
+
+  handleTimeClick = (e) => {
+    this.props.handleTimeClick(e.target.textContent);
   };
 
   render() {
@@ -20,25 +25,27 @@ class TimeBar extends React.Component {
         <ul className="timer-bar">
           <li
             className={
-              this.state.current === 'Daily' ? 'active time-li' : 'time-li'
+              this.props.currentTime === 'Daily' ? 'active time-li' : 'time-li'
             }
-            onClick={this.onTimeClick}
+            onClick={this.handleTimeClick}
           >
             Daily
           </li>
           <li
             className={
-              this.state.current === 'Weekly' ? 'active time-li' : 'time-li'
+              this.props.currentTime === 'Weekly' ? 'active time-li' : 'time-li'
             }
-            onClick={this.onTimeClick}
+            onClick={this.handleTimeClick}
           >
             Weekly
           </li>
           <li
             className={
-              this.state.current === 'Monthly' ? 'active time-li' : 'time-li'
+              this.props.currentTime === 'Monthly'
+                ? 'active time-li'
+                : 'time-li'
             }
-            onClick={this.onTimeClick}
+            onClick={this.handleTimeClick}
           >
             Monthly
           </li>

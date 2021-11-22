@@ -7,7 +7,10 @@ class UserTimeStatus extends React.Component {
     return (
       <div className="user-time-status">
         <UserCard />
-        <TimeBar />
+        <TimeBar
+          currentTime={this.props.currentTime}
+          handleTimeClick={this.props.handleTimeClick}
+        />
       </div>
     );
   }
