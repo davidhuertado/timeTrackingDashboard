@@ -37,7 +37,7 @@ body {
   margin: auto auto auto 10px;
 }
 .name-container {
-  margin: auto 30px auto auto;
+  margin: auto 20px auto auto;
 }
 .user-card .user-h {
   font-weight: 300;
@@ -68,20 +68,17 @@ body {
 .user-time-status {
   background-color: hsl(235, 46%, 20%);
   border-radius: 10px;
-  width: 335px;
+  width: 315px;
 }
 
 .task-header {
-  /* background-color: hsl(15, 100%, 70%); */
   overflow: hidden;
   position: relative;
   height: 40px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.taskCard {
-  width: 335px;
-}
+
 .info-header {
   display: flex;
   justify-content: space-between;
@@ -91,7 +88,6 @@ body {
   background-color: hsl(235, 46%, 20%);
   border-radius: 10px;
   border: solid 1px hsl(235, 46%, 20%);
-  cursor: pointer;
 }
 .task-info:hover {
   background-color: #34397b;
@@ -121,10 +117,13 @@ body {
 }
 .task-card {
   border-radius: 10px;
-  width: 335px;
+  width: 315px;
 }
 .ellipsis-icon {
   cursor: pointer;
+}
+.ellipsis-icon:hover {
+  fill: #fff;
 }
 
 @media only screen and (min-width: 992px) {

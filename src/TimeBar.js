@@ -4,16 +4,7 @@ class TimeBar extends React.Component {
   constructor(props) {
     super(props);
     this.handleTimeClick = this.handleTimeClick.bind(this);
-
-    // this.state = { current: 'Weekly' };
   }
-
-  // onTimeClick = (e) => {
-  //   const newTime = e.target.textContent;
-  //   this.setState((state, props) => ({
-  //     current: newTime,
-  //   }));
-  // };
 
   handleTimeClick = (e) => {
     this.props.handleTimeClick(e.target.textContent);
