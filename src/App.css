@@ -91,6 +91,10 @@ body {
   background-color: hsl(235, 46%, 20%);
   border-radius: 10px;
   border: solid 1px hsl(235, 46%, 20%);
+  cursor: pointer;
+}
+.task-info:hover {
+  background-color: #34397b;
 }
 
 .task-name {
@@ -123,13 +127,11 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .App {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 25px;
-    justify-items: center;
-    padding: 100px;
+    padding: 50px;
   }
   .user-card {
     flex-direction: column;
@@ -142,12 +144,13 @@ body {
     font-size: 33px;
     margin-top: 15px;
   }
+
   .user-time-status {
-    width: 255px;
+    width: 200px;
     grid-row: 1 / 3;
   }
   .task-card {
-    width: 255px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -158,7 +161,7 @@ body {
     padding: 0 30px 20px;
   }
   .hours-h {
-    font-size: 45px;
+    font-size: 30px;
   }
   .task-hours-div {
     margin: 20px 0 10px;
@@ -173,5 +176,21 @@ body {
   .timer-bar .time-li {
     margin-bottom: 20px;
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .user-card .user-h {
+    font-size: 33px;
+  }
+  .user-time-status {
+    width: 255px;
+  }
+  .task-card {
+    width: 255px;
+  }
+
+  .hours-h {
+    font-size: 45px;
   }
 }

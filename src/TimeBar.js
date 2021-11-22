@@ -7,31 +7,39 @@ class TimeBar extends React.Component {
     this.state = { current: 'Weekly' };
   }
 
-  // onTimeClick = (e) => {
-  //   let timeOptions = Array.from(document.querySelectorAll('.time-li'));
-
-  //   console.log(timeOptions);
-  //   console.log(e.target);
-  //   const willBeActive = e.target.textContent;
-  //   this.setState({ current: willBeActive });
-
-  //   const willActivate = (element) =>
-  //     element.textContent === this.state.current;
-
-  //   console.log(timeOptions.find(willActivate));
-  // };
+  onTimeClick = (e) => {
+    const newTime = e.target.textContent;
+    this.setState((state, props) => ({
+      current: newTime,
+    }));
+  };
 
   render() {
     return (
       <div class="timer-bar-container">
         <ul className="timer-bar">
-          <li className="time-li" onClick={this.onTimeClick}>
+          <li
+            className={
+              this.state.current === 'Daily' ? 'active time-li' : 'time-li'
+            }
+            onClick={this.onTimeClick}
+          >
             Daily
           </li>
-          <li className="active time-li" onClick={this.onTimeClick}>
+          <li
+            className={
+              this.state.current === 'Weekly' ? 'active time-li' : 'time-li'
+            }
+            onClick={this.onTimeClick}
+          >
             Weekly
           </li>
-          <li className="time-li" onClick={this.onTimeClick}>
+          <li
+            className={
+              this.state.current === 'Monthly' ? 'active time-li' : 'time-li'
+            }
+            onClick={this.onTimeClick}
+          >
             Monthly
           </li>
         </ul>
